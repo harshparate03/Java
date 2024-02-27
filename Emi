@@ -1,0 +1,21 @@
+import java.util.*;
+public class EMI
+{
+	public static void main(String args[])
+	{
+		int p,r,n=5,i;
+		System.out.print("Enter Principle Amount:");
+		Scanner S1=new Scanner(System.in);
+		p=S1.nextInt();
+
+		System.out.print("Enter Rate Of Interest:");
+		S1=new Scanner(System.in);
+		r=S1.nextInt();
+
+		i=(p*r*n)/100;
+
+		double emi=i/60;
+		System.out.println("EMI is:"+emi);
+		
+	}
+}
