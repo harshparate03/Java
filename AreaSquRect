@@ -1,0 +1,23 @@
+public class AreaSquRect
+{
+	double Area(double l,double b)
+	{
+		return(l*b);	
+	}
+
+	double Area(double a)
+	{
+		return(a*a);
+	}
+	public static void main(String args[])
+	{
+		AreaSquRect a1=new AreaSquRect();
+		double r=a1.Area(12,3.1);
+
+		System.out.println("Area of Rectangle is :" + r);
+
+		double s=a1.Area(4.2);
+		System.out.println("Area of Square is :" + s);
+		
+	}
+}
