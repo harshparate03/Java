@@ -1,0 +1,19 @@
+import java.util.*;
+public class Hypotenuse
+{
+	public static void main(String args[])
+	{
+		double x,y,h,z;
+		System.out.print("Enter value of X:");
+		Scanner s=new Scanner(System.in);
+		x=s.nextDouble();	
+		
+		System.out.print("Enter value of Y:");
+		s=new Scanner(System.in);
+		y=s.nextDouble();
+
+		z=(x*x)+(y*y);
+    h=Math.sqrt(z)
+		System.out.println("Hypotenuse of " + x + "and " + y +" is:" + Math.sqrt(h));
+	}
+}
