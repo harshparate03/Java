@@ -1,0 +1,76 @@
+import java.util.Scanner;
+public class Car
+{
+	public static void main(String args[])
+	{
+		System.out.println("1. Seat Covers");
+		System.out.println("2. Steering Wheel Covers");
+		System.out.println("3. Car Lighting");
+		System.out.println("4. Air Purifiers");
+		System.out.println("5. More");
+
+		int ch,p;
+		double Total;
+		System.out.print("Enter your Choice:");
+		Scanner s=new Scanner(System.in);
+		ch=s.nextInt();
+		
+		switch(ch)
+		{
+			case 1:
+			{
+				System.out.print("Enter Price of Seat Covers:");
+				s=new Scanner(System.in);
+				p=s.nextInt();
+				Total=p+(p*0.02);
+				System.out.println("Total Payable Amount for Seat Covers is:"+Total);
+				break;
+			}
+
+			case 2:
+			{
+				System.out.print("Enter Price of Steering Wheel Covers:");
+				s=new Scanner(System.in);
+				p=s.nextInt();
+				Total=p+(p*0.03);
+				System.out.println("Total Payable Amount for Steering Wheel Covers is:"+Total);
+				break;
+			}
+
+
+			case 3:
+			{
+				System.out.print("Enter Price of Car Lighting:");
+				s=new Scanner(System.in);
+				p=s.nextInt();
+				Total=p+(p*0.04);
+				System.out.println("Total Payable Amount for Car Lighting is:"+Total);
+				break;
+			}
+
+			case 4:
+			{
+				System.out.print("Enter Price of Air Purifiers:");
+				s=new Scanner(System.in);
+				p=s.nextInt();
+				Total=p+(p*0.025);
+				System.out.println("Total Payable Amount for Air Purifiers is:"+Total);
+				break;
+			}
+
+			case 5:
+			{
+				System.out.print("Enter Price of More:");
+				s=new Scanner(System.in);
+				p=s.nextInt();
+				Total=p+(p*0.012);
+				System.out.println("Total Payable Amount for More is:"+Total);
+				break;
+			}
+
+			default:
+				System.out.println("Enter valid Choice.");
+
+		}
+	}
+}
