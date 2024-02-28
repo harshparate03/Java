@@ -1,0 +1,43 @@
+abstract class Vehicle
+{
+	abstract void NumWheels();
+}
+
+class Car extends Vehicle
+{
+	String Name;
+	int x;
+	Car(String nm,int p)
+	{
+		Name=nm;
+		x=p;
+	}
+	void NumWheels()
+	{
+		System.out.println(Name +" Car have "+ x + " Wheels.");
+	}
+}
+
+public class Truck extends Vehicle
+{
+	String Name;
+	int x;
+	Truck(String nm,int p)
+	{
+		Name=nm;
+		x=p;
+	}
+	void NumWheels()
+	{
+		System.out.println(Name +" Truck have "+ x + " Wheels.");
+	}
+
+	public static void main(String args[])
+	{
+		Car c=new Car("Bugatti",4);
+		c.NumWheels();
+
+		Truck t=new Truck("Mercedes",8);
+  		t.NumWheels();
+	}
+}
