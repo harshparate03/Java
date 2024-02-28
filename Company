@@ -1,0 +1,28 @@
+public class Company
+{
+	public static void main(String args[])
+	{
+		String c[]={"Tinkal","Reena","Harsh","Asha","Vinod"};
+		int p[]={1,50,205,30,5};
+	
+		int min=p[0];
+
+		for(int i=0;i<5;i++)
+		{
+			if(p[i]<min)
+			{
+				min=p[i];
+			}
+		}
+
+		for(int i=0;i<5;i++)
+		{
+			if(min==p[i])
+			{
+				System.out.println(c[i]);
+			}
+		}
+
+		System.out.println(min);
+	}
+}
