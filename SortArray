@@ -1,0 +1,36 @@
+public class SortArray
+{
+	public static void main(String args[])
+	{
+		int []x=new int[args.length];
+		int i,j,tmp;
+
+		System.out.println("Array Before Sorting:");
+		for(i=0;i<args.length;i++)
+		{
+			x[i]=Integer.parseInt(args[i]);
+			System.out.println(x[i]);
+		}
+
+		for(i=0;i<4;i++)
+		{
+			for(j=i+1;j<5;j++)
+			{
+				if(x[i]>x[j])
+				{
+					tmp=x[i];
+					x[i]=x[j];
+					x[j]=tmp;
+				}
+			}
+		}
+
+		System.out.println("Array After Sorting:");
+		for(i=0;i<args.length;i++)
+		{
+			//x[i]=Integer.parseInt(args[i]);
+			System.out.println(x[i]);
+		}
+
+	}
+}
