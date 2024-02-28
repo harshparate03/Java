@@ -1,0 +1,43 @@
+abstract class Vagetable
+{
+	String Color;
+}
+
+class Cabbage extends Vagetable
+{
+	public String toString()
+	{
+		Color="Green";
+		return("Cabbage is:"+Color);
+	}
+}
+
+class Carrot extends Vagetable
+{
+	public String toString()
+	{
+		Color="Red";
+		return("Carrot is:"+Color);
+	}
+}
+
+public class Potato extends Vagetable
+{
+	
+	public String toString()
+	{
+		Color="Brown";
+		return("Potato is:"+Color);
+	}
+
+	public static void main(String args[])
+	{
+		Cabbage c=new Cabbage();
+		Carrot ca=new Carrot();
+		Potato p=new Potato();
+
+		System.out.println(c);
+		System.out.println(ca);
+		System.out.println(p);
+	}
+}
