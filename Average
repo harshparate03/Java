@@ -1,0 +1,31 @@
+interface Numbers
+{
+	int Process(int x,int y);
+}
+
+class Sum implements Numbers
+{
+	public int Process(int x,int y)
+	{
+		return(x+y);
+	}
+}
+
+public class Average implements Numbers
+{
+	public int Process(int x,int y)
+	{
+		return((x+y)/2);
+	}
+
+	public static void main(String args[])
+	{
+		Sum s=new Sum();
+		double sum=s.Process(3,5);
+		System.out.println("Sum is:"+sum);
+
+		Average a=new Average();
+		double avg=a.Process(3,3);
+		System.out.println("Average is:"+avg);
+	}
+}
