@@ -1,0 +1,54 @@
+import java.util.Scanner;
+interface Exam
+{
+	Boolean Pass(int Mark);
+}
+
+interface Classify
+{
+	String Divison(int Average);
+}
+
+public class Result implements Exam
+{
+	public Boolean Pass(int Mark)
+	{
+		if(Mark>=35)
+			return true;
+		else
+			return false;	
+	}
+	
+	public String Divison(int Average)
+	{
+		if(Average >=60)
+			return ("First");
+		else if(Average >=50 && Average<60)
+			return ("Second");
+		else
+			return ("No Divison");
+	}
+
+	public static void main(String args[])
+	{
+		int m,a;
+		Boolean p;
+		String c;
+		Result r=new Result();
+	
+		System.out.print("Enter Marks:");
+		Scanner s=new Scanner(System.in);
+		m=s.nextInt();
+
+		System.out.print("Enter Average:");
+		s=new Scanner(System.in);
+		a=s.nextInt();
+
+		p=r.Pass(m);
+		c=r.Divison(a);			
+		if(p==true)
+			System.out.println("You are Pass with "+ c +" Class.");
+		else
+			System.out.println("You are Fail. "+c);				
+	}
+}
