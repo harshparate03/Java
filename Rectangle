@@ -1,0 +1,39 @@
+abstract class Calculation
+{
+	abstract void Area();
+}
+
+class Rectangle extends Calculation
+{
+	int l,w;
+	Rectangle(int x,int y)
+	{
+		l=x;
+		w=y;
+	}
+	void Area()
+	{
+		System.out.println("Area of Rectangle is:"+(l*w));
+	}
+}
+
+public class Triangle extends Calculation
+{
+	float h,b;
+	Triangle(float x,float y)
+	{
+		h=x;
+		b=y;
+	}
+	void Area()
+	{
+		System.out.println("Area of Triangle is:"+(0.5*(h*b)));		
+	}
+	public static void main(String args[])
+	{
+		Rectangle r=new Rectangle(11,7);
+		r.Area();
+		Triangle t=new Triangle(2.3f,3.5f);
+		t.Area();
+	}
+}
