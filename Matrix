@@ -1,0 +1,75 @@
+import java.util.*;
+public class Matrix
+{
+	public static void main(String args[])
+	{
+		int x[][]=new int[3][3];
+		int y[][]=new int[3][3];
+		int z[][]=new int[3][3];
+
+		int i,j,k;
+
+		System.out.println("Enter value for Matrix-1 :");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print("Enter Number [" +(i) + "]"+"[" +(j) + "]:");
+				Scanner s=new Scanner(System.in);
+				x[i][j]=s.nextInt();
+			}
+			System.out.println();
+		}
+
+		System.out.println("Enter value for Matrix-2 :");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print("Enter Number [" +(i) + "]"+"[" +(j) + "]:");
+				Scanner s=new Scanner(System.in);
+				y[i][j]=s.nextInt();
+			}
+			System.out.println();
+		}
+
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				z[i][j]=x[i][j]+y[i][j];
+			}
+			System.out.println();
+		}
+
+		System.out.println("\n"+"Matrix-1 :");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(x[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+		System.out.println("\n"+"Matrix-2 :");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(y[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+		System.out.println("\n"+"Addition :");
+		for(i=0;i<3;i++)
+		{
+			for(j=0;j<3;j++)
+			{
+				System.out.print(z[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
