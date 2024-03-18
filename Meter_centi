@@ -1,0 +1,39 @@
+class Unitformatexception extends Exception
+{
+	Unitformatexception(String s)
+	{
+		super(s);
+	}
+}
+
+public class meter_centi
+{
+	public static void main(String args[])
+	{
+		int n=Integer.parseInt(args[0]);
+		String u=args[1];
+		try{
+			if(u.equals("Centimeter"))
+			{
+				int m=n/100;
+				System.out.println(n+" Centimeter = "+m+" Meter");
+			}
+			else if(u.equals("Meter"))
+			{
+				int c=n*100;
+				System.out.println(n+" Meter = "+c+" Centimeter");
+			}
+
+			else
+			{
+				throw new Unitformatexception(u);
+			}
+		}
+		
+		catch(Unitformatexception e)
+		{
+			System.out.println(e);
+		}
+
+	}	
+}
