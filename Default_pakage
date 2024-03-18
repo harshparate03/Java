@@ -1,0 +1,51 @@
+package Default_Package;
+import pack_A.*;
+import pack_B.*;
+import pack_C.*;
+public class Default_Class
+{
+    public static void main(String args[])
+    {
+        A a = new A();
+        B b = new B();
+        C c = new C();
+
+        a.display_A();
+        b.display_B();
+        c.display_C();
+    }    
+}
+
+
+
+
+package pack_A;
+public class A {
+    public void display_A()
+    {
+        System.out.println("Class A");
+    }
+}
+
+
+
+
+package pack_B;
+public class B
+{
+    public void display_B()
+    {
+        System.out.println("Class B");
+    }
+}
+
+
+
+package pack_C;
+public class C
+{
+    public void display_C()
+    {
+        System.out.println("Class C");
+    }
+}
