@@ -1,0 +1,35 @@
+class Test_Exc extends Exception
+{
+	Test_Exc(String s)
+	{
+		super(s);
+	}
+}
+
+public class Check_Age 
+{
+	void chk_Age(int x)throws Test_Exc 
+	{
+		if(x<0 || x>100)
+			throw new Test_Exc("Out Of Range");
+			
+	}
+	public static void main(String args[])
+	{
+		Check_Age c=new Check_Age();
+		int x[]=new int[args.length];
+		for(int i=0;i<args.length;i++)
+		{
+			x[i]=Integer.parseInt(args[i]);
+			System.out.println(x[i]);
+			try{
+				c.chk_Age(x[i]);
+			}
+			catch(Test_Exc e)
+			{
+				System.out.println(e);
+				break;
+			}
+		}
+	}
+}
