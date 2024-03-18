@@ -1,0 +1,36 @@
+import pc.PackClass;
+class DemoClass
+{
+    public static void main(String[] args) {
+        PackClass p = new PackClass();
+        p.FindMax();
+    }
+}
+
+
+
+
+
+package pc;
+import java.util.Scanner; 
+public class PackClass
+{
+    public static void FindMax()
+    {
+        int x,y,z;
+        System.out.print("Enter First NUmber: ");
+        Scanner s = new Scanner(System.in);
+        x = s.nextInt();
+
+        System.out.print("Enter Second NUmber: ");
+        s = new Scanner(System.in);
+        y = s.nextInt();
+
+        System.out.print("Enter Third NUmber: ");
+        s = new Scanner(System.in);
+        z = s.nextInt();
+
+        int max = (x>y)?((x>z)?x:z):((y>z)?y:z);
+        System.out.println("Maximum is : " +max);
+    }
+}
