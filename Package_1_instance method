@@ -1,0 +1,36 @@
+import pack2.B3;
+class A3B3
+{
+    public static void main(String args[])
+    {
+        B3 b = new B3();
+        b.display_B3();
+        System.out.println("Class A3B3");
+    }
+}
+
+
+
+package pack1;
+public class A3
+{
+    int x;
+    public void display_A3()
+    {
+        System.out.println("Display A3");
+    }
+}
+
+
+
+package pack2;
+import pack1.*;
+public class B3
+{
+    public void display_B3()
+    {
+        A3 a = new A3();
+        a.display_A3();
+        System.out.println("Display B3");
+    }
+}
