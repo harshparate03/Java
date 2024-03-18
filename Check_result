@@ -1,0 +1,53 @@
+import java.util.Scanner;
+class Out_Of_Range_Exception extends Exception
+{
+	Out_Of_Range_Exception(String s)
+	{
+		super(s);
+	}
+}
+
+public class Check_Result
+{
+	public void GetData()throws Out_Of_Range_Exception
+	{	
+		int x[]=new int[3];
+		for(int i=0;i<3;i++)
+		{
+			System.out.print("Enter Marks of Subject["+ (i+1) +"]:" );
+			Scanner s=new Scanner(System.in);
+			x[i]=s.nextInt();
+
+			if(x[i]<0 || x[i]>100)
+			{
+				throw new Out_Of_Range_Exception("Out of Range");
+			}
+		
+		}
+			if(x[0]>=40 && x[1]>=40 && x[2]>=40)
+				System.out.println("PASS");
+			else 
+				System.out.println("FAIL");	
+	}
+	
+	public static void main(String args[])
+	{
+		Check_Result c=new Check_Result();
+		try{
+			c.GetData();
+		}
+		catch(Out_Of_Range_Exception e)
+		{
+			System.out.println("Out_Of_Range_Exception ");
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());	
+		}
+	}
+	
+}
