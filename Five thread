@@ -1,0 +1,83 @@
+class Thread1 extends Thread
+{
+	int p;
+	Thread1(int a)
+	{
+		p=a;	
+	}
+	public void run()
+	{
+		try{
+			for(int i=1;i<=10;i++)
+			{
+				System.out.println("X "+ p + "[" + i +"]");
+			}
+			Thread.sleep(500);
+			System.out.println();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+	}
+}
+
+public class Demo 
+{
+	public static void main(String args[])
+	{
+		Thread1 t1=new Thread1(1);
+		Thread1 t2=new Thread1(2);
+		Thread1 t3=new Thread1(3);
+		Thread1 t4=new Thread1(4);
+		Thread1 t5=new Thread1(5);
+		
+		t1.start();
+		try{
+			t1.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+
+		t2.start();
+		try{
+			t2.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+
+		t3.start();
+		try{
+			t3.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+
+		t4.start();
+		try{
+			t4.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+
+		t5.start();
+		try{
+			t5.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+
+		System.out.println("Hello");
+
+	}
+}
