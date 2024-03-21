@@ -1,0 +1,24 @@
+import java.applet.*;
+import java.awt.*;
+/*<applet code="AvgSum.class" height=300 width=300>
+<param NAME=n1 value=5 ></param>
+<param NAME=n2 value=7 ></param>
+</applet>*/
+
+public class AvgSum extends Applet
+{
+	public void paint(Graphics g)
+	{
+		String x,y;
+		int a,b;
+
+		x=getParameter("n1");
+		a=Integer.parseInt(x);
+
+		y=getParameter("n2");
+		b=Integer.parseInt(y);
+
+		g.drawString("Sum is:"+(a+b) ,50,50);
+		g.drawString("Average is:"+ ((a+b)/2),50,80);		
+	}
+}
