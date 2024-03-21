@@ -1,0 +1,15 @@
+import java.applet.*;
+import java.awt.*;
+
+/*<Applet code="Circle.class" height=300 width=300></Applet>*/
+
+public class Circle extends Applet
+{
+	public void paint(Graphics g)
+	{
+		g.drawOval(75,75,150,150);
+		g.drawLine(170,80,135,222); //  /
+		g.drawLine(100,95,205,200); // \
+		g.drawLine(78,167,220,130); // --		
+	} 
+}
