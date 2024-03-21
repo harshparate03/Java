@@ -1,0 +1,78 @@
+class Even extends Thread
+{
+	int e;
+	Even(int x)
+	{
+		e=x;
+	}
+	public void run()
+	{
+	try{
+		System.out.println("Even Numbers:");
+		for(int i=0;i<=e;i++)
+		{
+			if(i%2==0)
+			{
+				System.out.println(i);
+			}
+		}
+		Thread.sleep(800);
+	}
+	catch(Exception e)
+	{
+		System.out.println("Error"+e);
+	}
+	}
+}
+public class Odd extends Thread
+{
+	int e;
+	Odd(int x)
+	{
+		e=x;
+	}
+	public void run()
+	{
+	try{
+		System.out.println("Odd Numbers:");
+		for(int i=0;i<=e;i++)
+		{
+			if(i%2!=0)
+			{
+				System.out.println(i);
+			}
+		}
+		Thread.sleep(800);
+	}
+	catch(Exception e)
+	{
+		System.out.println("Error"+e);
+	}
+	}
+	public static void main(String args[])
+	{
+		int n;
+		n=Integer.parseInt(args[0]);
+
+		Even t1=new Even(n);
+		t1.start();
+		try{
+			t1.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+
+		Odd t2=new Odd(n);
+		t2.start();
+		try{
+			t2.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+
+	}
+}
