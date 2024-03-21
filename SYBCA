@@ -1,0 +1,65 @@
+class FYBCA extends Thread
+{
+	public void run()
+	{
+		try{
+			for(int i=0;i<4;i++)
+			{
+				System.out.println("FYBCA");
+			}
+			Thread.sleep(500);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+	}
+}
+
+public class SYBCA extends Thread
+{
+	public void run()
+	{
+		try{
+		
+		for(int i=0;i<4;i++)
+			{
+				System.out.println("SYBCA");
+			}
+			Thread.sleep(500);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+	}
+	public static void main(String args[])
+	{
+		FYBCA f=new FYBCA();
+		SYBCA s=new SYBCA();
+		
+		f.setPriority(Thread.MAX_PRIORITY);
+		s.setPriority(Thread.NORM_PRIORITY);
+		//this.setPriority(Thread.MIN_PRIORITY);
+		//System.out.println(f.getPriority());
+		
+		f.start();
+		try{
+			f.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+
+		s.start();
+		try{
+			s.join();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error"+e);
+		}
+		System.out.println("TYBCA");
+	}
+}
